@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codingame.apu.init.phase", "codingame.apu.init.phase\codingame.apu.init.phase.csproj", "{A761BEAD-A2E0-4CFB-BCD7-1F3E2DEE0774}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "codingame.apu.init.phase.test", "codingame.apu.init.phase.test\codingame.apu.init.phase.test.csproj", "{E6FF2FDA-B525-4760-9D66-B171F408EC73}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A761BEAD-A2E0-4CFB-BCD7-1F3E2DEE0774}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A761BEAD-A2E0-4CFB-BCD7-1F3E2DEE0774}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A761BEAD-A2E0-4CFB-BCD7-1F3E2DEE0774}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A761BEAD-A2E0-4CFB-BCD7-1F3E2DEE0774}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E6FF2FDA-B525-4760-9D66-B171F408EC73}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E6FF2FDA-B525-4760-9D66-B171F408EC73}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E6FF2FDA-B525-4760-9D66-B171F408EC73}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E6FF2FDA-B525-4760-9D66-B171F408EC73}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
