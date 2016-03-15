@@ -38,6 +38,24 @@
             Check.That(_writter.Lines).Contains(expected);
         }
 
+        [TestMethod]
+        public void BaseTest()
+        {
+            var grid = new Grid(5, 1);
+            grid.AddCells(0, "0.0.0");
+
+            grid.WriteLines(_writter.Write);
+
+            var expected = new[] 
+            { 
+                "0 0 1 0 0 1",
+                "1 0 -1 -1 -1 -1",
+                "0 1 -1 -1 -1 -1"
+            };
+
+            Check.That(_writter.Lines).Contains(expected);
+        }
+
         private class Writter
         {
             private readonly List<string> _lines = new List<string>();
