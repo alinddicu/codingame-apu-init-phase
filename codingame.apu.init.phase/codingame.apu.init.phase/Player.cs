@@ -34,16 +34,14 @@
     public class Grid
     {
         private readonly List<Cell> _cells = new List<Cell>();
+        private readonly int _height;
+        private readonly int _width;
 
         public Grid(int width, int height)
         {
-            Width = width;
-            Height = height;
+            _width = width;
+            _height = height;
         }
-
-        public int Height { get; private set; }
-
-        public int Width { get; private set; }
 
         public void AddCells(int y, string linePopulation)
         {
@@ -126,11 +124,6 @@
             do
             {
                 cell = Get(X, y, grid);
-                //if (y > grid.Height - 1)
-                //{
-                //    break;
-                //}
-
                 y++;
             }
             while (cell != null && !(cell is Node));
@@ -146,11 +139,6 @@
             do
             {
                 cell = Get(x, Y, grid);
-                //if (x > grid.Width - 1)
-                //{
-                //    break;
-                //}
-
                 x++;
             }
             while (cell != null && !(cell is Node));
