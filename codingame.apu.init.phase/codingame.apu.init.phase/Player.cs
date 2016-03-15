@@ -1,11 +1,8 @@
 ﻿namespace codingame.apu.init.phase
 {
     using System;
-    using System.Linq;
-    using System.IO;
-    using System.Text;
-    using System.Collections;
     using System.Collections.Generic;
+    using System.Linq;
 
     /**
      * Don't let the machines win. You are humanity's last hope...
@@ -16,7 +13,7 @@
         {
             int width = int.Parse(Console.ReadLine()); // the number of cells on the X axis
             int height = int.Parse(Console.ReadLine()); // the number of cells on the Y axis
-            var grid = new Grid(width, height);
+            var grid = new Grid();
             for (int i = 0; i < height; i++)
             {
                 grid.AddCells(i, Console.ReadLine()); // width characters, each either 0 or .
@@ -34,14 +31,6 @@
     public class Grid
     {
         private readonly List<Cell> _cells = new List<Cell>();
-        private readonly int _height;
-        private readonly int _width;
-
-        public Grid(int width, int height)
-        {
-            _width = width;
-            _height = height;
-        }
 
         public void AddCells(int y, string linePopulation)
         {

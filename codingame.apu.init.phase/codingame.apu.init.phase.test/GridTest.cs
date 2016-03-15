@@ -1,32 +1,30 @@
 ﻿namespace codingame.apu.init.phase.test
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
-    using System.Text;
-    using System.Threading.Tasks;
     using Microsoft.VisualStudio.TestTools.UnitTesting;
     using NFluent;
-    
+    using System.Collections.Generic;
+
     [TestClass]
     public class GridTest
     {
+        private Grid _grid;
         private Writter _writter;
 
         [TestInitialize]
         public void Initialize()
         {
+            _grid = new Grid();
             _writter = new Writter();
         }
 
         [TestMethod]
         public void BaseTest()
         {
-            var grid = new Grid(2, 2);
-            grid.AddCells(0, "00");
-            grid.AddCells(1, "0.");
+            _grid = new Grid();
+            _grid.AddCells(0, "00");
+            _grid.AddCells(1, "0.");
 
-            grid.WriteLines(_writter.Write);
+            _grid.WriteLines(_writter.Write);
 
             var expected = new[] 
             { 
@@ -41,10 +39,10 @@
         [TestMethod]
         public void Horizontal()
         {
-            var grid = new Grid(5, 1);
-            grid.AddCells(0, "0.0.0");
+            _grid = new Grid();
+            _grid.AddCells(0, "0.0.0");
 
-            grid.WriteLines(_writter.Write);
+            _grid.WriteLines(_writter.Write);
 
             var expected = new[] 
             { 
