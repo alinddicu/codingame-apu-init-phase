@@ -39,7 +39,7 @@
         }
 
         [TestMethod]
-        public void BaseTest()
+        public void Horizontal()
         {
             var grid = new Grid(5, 1);
             grid.AddCells(0, "0.0.0");
