@@ -48,9 +48,9 @@
 
             var expected = new[] 
             { 
-                "0 0 1 0 0 1",
-                "1 0 -1 -1 -1 -1",
-                "0 1 -1 -1 -1 -1"
+                "0 0 2 0 -1 -1",
+                "2 0 4 0 -1 -1",
+                "4 0 -1 -1 -1 -1"
             };
 
             Check.That(_writter.Lines).Contains(expected);
