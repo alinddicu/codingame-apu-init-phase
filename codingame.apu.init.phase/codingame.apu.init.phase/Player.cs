@@ -16,15 +16,18 @@
         {
             int width = int.Parse(Console.ReadLine()); // the number of cells on the X axis
             int height = int.Parse(Console.ReadLine()); // the number of cells on the Y axis
+            var grid = new Grid(width, height);
             for (int i = 0; i < height; i++)
             {
-                string line = Console.ReadLine(); // width characters, each either 0 or .
+                grid.AddCells(i, Console.ReadLine()); // width characters, each either 0 or .
             }
 
             // Write an action using Console.WriteLine()
             // To debug: Console.Error.WriteLine("Debug messages...");
 
-            Console.WriteLine("0 0 1 0 0 1"); // Three coordinates: a node, its right neighbor, its bottom neighbor
+            grid.WriteLines(Console.WriteLine);
+
+            //Console.WriteLine("0 0 1 0 0 1"); // Three coordinates: a node, its right neighbor, its bottom neighbor
         }
     }
 
