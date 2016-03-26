@@ -9,10 +9,10 @@
      **/
     class Player
     {
-        static void Main(string[] args)
+        static void Main()
         {
-            int width = int.Parse(Console.ReadLine()); // the number of cells on the X axis
-            int height = int.Parse(Console.ReadLine()); // the number of cells on the Y axis
+            int width = int.Parse(s: Console.ReadLine()); // the number of cells on the X axis
+            int height = int.Parse(s: Console.ReadLine()); // the number of cells on the Y axis
             var grid = new Grid();
             for (int i = 0; i < height; i++)
             {
@@ -49,7 +49,7 @@
 
         public void WriteLines(Action<string> writter)
         {
-            var nodes = _cells.OfType<Node>().Cast<Node>().ToArray();
+            var nodes = _cells.OfType<Node>().ToArray();
             foreach (var node in nodes)
             {
                 writter(node + " " + string.Join(" ", node.GetNeighbours(this)));
@@ -107,7 +107,7 @@
 
         private Cell GetBelow(Grid grid)
         {
-            Cell cell = null;
+            Cell cell;
             var y = Y + 1;
 
             do
@@ -122,7 +122,7 @@
 
         private Cell GetRight(Grid grid)
         {
-            Cell cell = null;
+            Cell cell;
             var x = X + 1;
 
             do
@@ -142,7 +142,7 @@
 
         private static Cell GetDefault(Cell cell)
         {
-            if (cell != null && cell is Node)
+            if (cell is Node)
             {
                 return cell;
             }
